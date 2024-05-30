@@ -24,10 +24,13 @@ def get_locale():
     """
     Select the best match language based on the request.
     """
+<<<<<<< HEAD
     # Check if the locale is specified in the query parameters
     locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
+=======
+>>>>>>> dc61a8d0a1b2e93f036ba2090f093f2ae0b420a9
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 @app.route('/')
